@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  </head>
+  <body
+    style="
+      background: rgb(83, 0, 153);
+      background: linear-gradient(
+        124deg,
+        rgba(83, 0, 153, 1) 0%,
+        rgba(173, 76, 255, 1) 0%,
+        rgba(169, 128, 204, 1) 0%,
+        rgba(255, 255, 255, 1) 90%
+      );
+    "
+  >
+    <nav class="bg-[#ffddd2] shadow-lg fixed w-screen z-10">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href=""
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black"
+            >Collabs</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium items-center flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#ffddd2] dark:bg-[#ffddd2] md:bg-#ffddd2"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 px-3 text-black md:bg-transparent md:text-black md:p-0 dark:text-black"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="catalog.html"
+                class="block py-2 px-3 underline rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-black"
+                >Catalog</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://shopify.com/71007633623/identity/lookup?destination_uuid=2c1eb0f3-1543-4902-a907-412edef889f6&redirect_uri=https%3A%2F%2Fshopify.com%2F71007633623%2Faccount%2Fcallback&rid=de71d105-e706-46a9-9876-19ac71ee6e19&ui_locales=en&verify=1723025302-QXPcIaTzqUduxYuyyoMpD1L5j5BYQUDJTm1eHSPH4tw%3D"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill=""
+                  class="size-6 text-black"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-modal-target="default-modal"
+                data-modal-toggle="default-modal"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6 text-black"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <input
+                type="search"
+                name=""
+                id="myInput"
+                onkeyup="myFunction()"
+                placeholder="Search"
+                class="block py-2 px-3 rounded-xl border-0 hidden md:block"
+                id=""
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <button
+      data-drawer-target="sidebar-multi-level-sidebar"
+      data-drawer-toggle="sidebar-multi-level-sidebar"
+      aria-controls="sidebar-multi-level-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    >
+      <span class="sr-only">Open sidebar</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
+
+    <aside
+      id="sidebar-multi-level-sidebar"
+      class="fixed mt-[72px] bg-[#ffddd2] left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto">
+        <ul class="space-y-2 font-medium">
+          <h1 class="font-bold text-2xl py-6">Products</h1>
+          <li>
+            <a
+              href="#"
+              class="flex items-center p-2 text-black rounded-lg dark:text-black hover:bg-gray-100"
+            >
+              <span class="ms-3">
+                <div
+                  class="block py-2 px-3 text-black md:bg-transparent md:text-black md:p-0 dark:text-black"
+                >
+                  <b>Filter: </b>
+                  <div>
+                    <button
+                      id="dropdownCheckboxButton"
+                      data-dropdown-toggle="dropdownDefaultCheckbox"
+                      class="text-white px-6 py-2 rounded-lg flex items-center bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                      type="button"
+                    >
+                      Availability
+                      <svg
+                        class="w-2.5 h-2.5 ms-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 4 4 4-4"
+                        />
+                      </svg>
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div
+                      id="dropdownDefaultCheckbox"
+                      class="z-10 hidden w-40 px-3 bg-white rounded-lg"
+                    >
+                      <div class="flex justify-between items-center">
+                        <div class="border-b border-gray-200 py-4">
+                          selected
+                        </div>
+                        <div>
+                          <p class="underline">reset</p>
+                        </div>
+                      </div>
+                      <ul
+                        class="p-3 space-y-3 text-sm text-black bg-white rounded-lg dark:text-gray-200"
+                        aria-labelledby="dropdownCheckboxButton"
+                      >
+                        <li>
+                          <div class="flex items-center">
+                            <input
+                              id="checkbox-item-1"
+                              type="checkbox"
+                              value=""
+                              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                            />
+                            <label
+                              for="checkbox-item-1"
+                              class="ms-2 text-sm font-medium text-gray-900 dark:text-black"
+                              >In Stock</label
+                            >
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="flex items-center">
+                            <input
+                              id="checkbox-item-3"
+                              type="checkbox"
+                              value=""
+                              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                            />
+                            <label
+                              for="checkbox-item-3"
+                              class="ms-2 text-sm font-medium text-gray-900 dark:text-black"
+                              >Out of Stock</label
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div></span
+              >
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="flex items-center p-2 text-black rounded-lg dark:text-black hover:bg-gray-100"
+            >
+              <span class="ms-3">
+                <div
+                  class="block py-2 px-3 text-black md:bg-transparent md:text-black md:p-0 dark:text-black"
+                >
+                  <div
+                    class="block py-2 px-3 rounded md:border-0 md:p-0 dark:text-black"
+                  >
+                    <!-- price -->
+                    <div>
+                      <button
+                        id="dropdownCheckboxButtonP"
+                        data-dropdown-toggle="dropdownDefaultCheckboxP"
+                        class="text-white px-6 py-2 rounded-lg flex items-center bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                        type="button"
+                      >
+                        Price
+                        <svg
+                          class="w-2.5 h-2.5 ms-3"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+
+                      <!-- Dropdown menu -->
+                      <div
+                        id="dropdownDefaultCheckboxP"
+                        class="z-10 hidden w-96 px-3 bg-white rounded-lg"
+                      >
+                        <div class="flex justify-between items-center">
+                          <div class="border-b border-gray-200 py-4">
+                            The highest price is $23.99
+                          </div>
+                          <div>
+                            <p class="underline">Reset</p>
+                          </div>
+                        </div>
+                        <ul
+                          class="p-3 space-y-3 text-sm text-black bg-white rounded-lg dark:text-gray-200"
+                          aria-labelledby="dropdownCheckboxButton"
+                        >
+                          <li>
+                            <div class="flex items-center gap-5">
+                              <label
+                                for="checkbox-item-1"
+                                class="ms-2 text-sm font-medium text-gray-900 dark:text-black"
+                                >$</label
+                              >
+                              <input
+                                type="number"
+                                value=""
+                                placeholder="From"
+                                class="w-10 h-10 px-3 py-3 w-full text-blue-600 rounded focus:ring-blue-500"
+                              />
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="flex items-center gap-5">
+                              <label
+                                for="checkbox-item-1"
+                                class="ms-2 text-sm font-medium text-gray-900 dark:text-black"
+                                >$</label
+                              >
+                              <input
+                                type="number"
+                                value=""
+                                placeholder="To"
+                                class="w-10 h-10 px-3 py-3 w-full text-blue-600 rounded focus:ring-blue-500"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div></div
+              ></span>
+            </a>
+          </li>
+
+          <li>
+            
+               <div class="flex items-center p-2 text-black rounded-lg dark:text-black hover:bg-gray-100">
+
+              
+                <div
+                  class="block py-2 px-3 text-black md:bg-transparent md:text-black md:p-0 dark:text-black"
+                >
+                  <b>Sort by: </b>
+                  <br>
+                  <span class="ms-3">
+
+                 
+                  <div class="block py-2 px-3 text-black md:bg-transparent md:text-black md:p-0 dark:text-black"  >
+                    <div>
+                      <button
+                        id="dropdownDefaultButton"
+                        data-dropdown-toggle="dropdown"
+                        class="text-white px-10 py-2 md:px-6 md:py-2 rounded-lg flex items-center bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                        type="button"
+                      >
+                        Alphabetically,A-Z
+                        <svg
+                          class="w-2.5 h-2.5 ms-3"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+
+                      <!-- Dropdown menu -->
+                      <div id="dropdown" class="z-10 w-60 hidden bg-white">
+                        <ul
+                          class="py-2 text-sm text-black dark:text-gray-200"
+                          aria-labelledby="dropdownDefaultButton"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-[#ffddd2] text-black"
+                              >Featured</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-[#ffddd2] text-black"
+                              >Best Selling</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-[#ffddd2] text-black"
+                              >Alphabetically, A-Z</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-[#ffddd2] text-black"
+                              >Alphabetically, Z-A</a
+                            >
+                          </li>
+
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-[#ffddd2] text-black"
+                              >Price, Low to High</a
+                            >
+                          </li>
+
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-[#ffddd2] text-black"
+                              >Price, High to Low</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-[#ffddd2] text-black"
+                              >Date, Old to New</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-[#ffddd2] text-black"
+                              >Date, New to Old</a
+                            >
+                          </li>
+                        </span>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            
+          </li>
+
+        </ul>
+      </div>
+    </aside>
+
+    <div class="p-4 sm:ml-60 pt-24">
+   
+      <section class="overflow-y-auto h-96 md:h-[500px]">
+        <div
+          id="myUL"
+          class="flex justify-center grid gap-5 mx-auto px-10 mt-5 md:gap-5 items-center md:flex md:justify-center md:grid md:grid-cols-4 md:mx-auto"
+        >
+          <div class="relative text-left">
+            <img
+              src="h1.webp"
+              class="h-[300px] w-52 shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+              alt="Image Description"
+            />
+            <div
+              class="absolute inset-0 w-52 flex items-center justify-center bg-gray-800 bg-opacity-75 text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+            >
+              <div class="grid px-2">
+                <b class="text-left text-2xl">The PussyCat Could be Good.</b>
+
+                <p class="py-3">THIS COULD BE GOOD - BOOK STONE</p>
+                <p>$23.99 AUD</p>
+                <button
+                  class="text-white px-6 mt-2 py-2 w-24 rounded-lg flex items-center bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                >
+                  <a href="cart.html">View</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="g1.jpg"
+              class="h-[300px] w-52 shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+              alt="Image Description"
+            />
+            <div
+              class="absolute inset-0 w-52 flex items-center justify-center bg-gray-800 bg-opacity-75 text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+            >
+            <div class="grid px-2">
+                <b class="text-left text-2xl">The GrandFather Could be Good.</b>
+
+                <p class="py-3">THIS COULD BE GOOD - BOOK STONE</p>
+                <p>$23.99 AUD</p>
+                <button
+                  class="text-white px-6 mt-2 py-2 w-24 rounded-lg flex items-center bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                >
+                <a href="cart.html">View</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="g2.jpg"
+              class="h-[300px] w-52 shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+              alt="Image Description"
+            />
+            <div
+              class="absolute inset-0 w-52 flex items-center justify-center bg-gray-800 bg-opacity-75 text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+            >
+            <div class="grid px-2">
+                <b class="text-left text-2xl">The GrandMother Could be Good.</b>
+
+                <p class="py-3">THIS COULD BE GOOD - BOOK STONE</p>
+                <p>$23.99 AUD</p>
+                <button
+                  class="text-white px-6 mt-2 py-2 w-24 rounded-lg flex items-center bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                >
+                <a href="cart.html">View</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="g3.jpg"
+              class="h-[300px] w-52 shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+              alt="Image Description"
+            />
+            <div
+              class="absolute inset-0 flex w-52 items-center justify-center bg-gray-800 bg-opacity-75 text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+            >
+            <div class="grid px-2">
+                <b class="text-left text-2xl">The Little Boy Could be Good.</b>
+
+                <p class="py-3">THIS COULD BE GOOD - BOOK STONE</p>
+                <p>$23.99 AUD</p>
+                <button
+                  class="text-white px-6 mt-2 py-2 w-24 rounded-lg flex items-center bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                >
+                <a href="cart.html">View</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="g5.jpg"
+              class="h-[300px] w-52 shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+              alt="Image Description"
+            />
+            <div
+              class="absolute inset-0 w-52 flex items-center justify-center bg-gray-800 bg-opacity-75 text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+            >
+            <div class="grid px-2">
+                <b class="text-left text-2xl">The Mother Could be Good</b>
+
+                <p class="py-3">THIS COULD BE GOOD - BOOK STONE</p>
+                <p>$23.99 AUD</p>
+                <button
+                  class="text-white px-6 mt-2 py-2 w-24 rounded-lg flex items-center bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                >
+                <a href="cart.html">View</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="h4.webp"
+              class="h-[300px] w-52 shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+              alt="Image Description"
+            />
+            <div
+              class="absolute inset-0 flex w-52 items-center justify-center bg-gray-800 bg-opacity-75 text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+            >
+            <div class="grid px-2">
+                <b class="text-left text-2xl">The Mother Could be Good</b>
+
+                <p class="py-3">THIS COULD BE GOOD - BOOK STONE</p>
+                <p>$23.99 AUD</p>
+                <button
+                  class="text-white px-6 mt-2 py-2 w-24 rounded-lg flex items-center bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                >
+                <a href="cart.html">View</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+      <br />
+      <br />
+
+      <footer class="bg-[#ffddd2]">
+        <div class="mx-auto w-full h-full max-w-screen-xl p-4 lg:py-8">
+          <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black"
+                >Join our email list</span
+              >
+              <br />
+              <input
+                type="text"
+                name=""
+                placeholder="Email"
+                class="rounded-xl px-6 py-2 mt-5 border-0"
+                id=""
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                <h2
+                  class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black"
+                >
+                  Follow us on
+                </h2>
+                <ul class="text-black dark:text-black font-medium">
+                  <li class="mb-4 flex gap-5">
+                    <button
+                      class="flex gap-5 bg-white rounded-xl px-6 py-2"
+                      data-modal-target="authentication-modal"
+                      data-modal-toggle="authentication-modal"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                        />
+                      </svg>
+                      <a href="" class="hover:underline"> Shop</a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Main modal -->
+    <div
+      id="authentication-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-black">
+              Follow on Shop
+            </h3>
+            <br />
+
+            <button
+              type="button"
+              class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-hide="authentication-modal"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-10">
+            <span
+              >Stay in the know—never miss a sale, restock, or order
+              update.</span
+            >
+            <form class="space-y-4" action="#">
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Your email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <button
+                class="px-6 py-2 text-white font-bold rounded-lg bg-[#457b9d] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+              >
+                <a
+                  href="https://accounts.shopify.com/lookup?rid=cad4dd32-1d00-4e50-8c74-a5b119f853bb&verify=1723021722-LfoZ6VEFGKq4fAiqt6VhPAuztoD0cYxh%2FpbKwNEEXR0%3D"
+                >
+                  Continue</a
+                >
+              </button>
+            </form>
+            <br />
+            <span
+              >By continuing, your name and email address will be shared with
+              This Could Be Good - Book Store</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("div");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("b")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+
+      function myFunctions() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInputs");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("div");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("b")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

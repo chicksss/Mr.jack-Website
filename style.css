@@ -1,0 +1,13 @@
+/* .gradient {
+    background: rgb(83,0,153);
+background: linear-gradient(124deg, rgba(83,0,153,1) 0%, rgba(173,76,255,1) 0%, rgba(169,128,204,1) 0%, rgba(255,255,255,1) 90%); 
+  } */
+
+  body{
+    font-family: "Quicksand", sans-serif;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.979);
+    height: 100%;
+}
+   
